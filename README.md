@@ -73,39 +73,37 @@ Now, Queue becomes empty, So, terminate these process of iteration.
 
 
 
-from collections import deque
-from collections import defaultdict
+from collections import deque<BR>
+from collections import defaultdict<BR>
 
 
-def bfs(graph,start,visited,path):
-    queue = deque()
-    path.append(start)
-    queue.append(start)
-    visited[start] = True
-    while len(queue) != 0:
-        tmpnode = queue.popleft()
+def bfs(graph,start,visited,path):<BR>
+    queue = deque()<BR>
+    path.append(start)<BR>
+    queue.append(start)<BR>
+    visited[start] = True<BR>
+    while len(queue) != 0:<BR>
+        tmpnode = queue.popleft()<BR>
         #TYPE UR CODE HERE
-        for neighbor in graph[tmpnode]:
-            if not visited[neighbor]:
-                path.append(neighbor)
-                queue.append(neighbor)
-                visited[neighbor] = True
+        for neighbor in graph[tmpnode]:<BR>
+            if not visited[neighbor]:<BR>
+                path.append(neighbor)<BR>
+                queue.append(neighbor)<BR>
+                visited[neighbor] = True<BR>
     
-    return path
-
-graph = defaultdict(list)
-v,e = map(int,input().split())
-for i in range(e):
+    return path<BR>
+graph = defaultdict(list)<BR>
+v,e = map(int,input().split())<BR>
+for i in range(e):<BR>
     #TYPE UR CODE HERE
-    u, v = input().split()
-    graph[u].append(v)
-    graph[v].append(u)
-
-start = '0'
-path = []
-visited = defaultdict(bool)
-traversedpath = bfs(graph,start,visited,path)
-print(traversedpath)
+    u, v = input().split()<BR>
+    graph[u].append(v)<BR>
+    graph[v].append(u)<BR>
+start = '0'<BR>
+path = []<BR>
+visited = defaultdict(bool)<BR>
+traversedpath = bfs(graph,start,visited,path)<BR>
+print(traversedpath)<BR>
 
 
 
