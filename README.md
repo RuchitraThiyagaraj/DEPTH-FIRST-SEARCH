@@ -71,7 +71,7 @@ Now, Queue becomes empty, So, terminate these process of iteration.
 <h2>PROGRAM: </h2>
 <hr>
 
-<hr>
+<p>
 from collections import deque
 from collections import defaultdict
 
@@ -106,7 +106,7 @@ visited = defaultdict(bool)
 traversedpath = bfs(graph,start,visited,path)
 print(traversedpath)
 
-</hr>
+</p>
 
 <hr>
 <h3>Sample Input</h3>
